@@ -24,7 +24,7 @@ mysqlConnection.connect((err) => {
 app.listen(3000, () => console.log('Express server is runnig at port no : 3000'));
 
 
-//Get all 
+//Get(tudo) 
 app.get('/Cruds', (req, res) => {
     mysqlConnection.query('SELECT * FROM Crud', (err, rows, fields) => {
         if (!err)

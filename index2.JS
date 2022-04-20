@@ -63,7 +63,7 @@ app.post('/Cruds', (req, res) => {
         if (!err)
             rows.forEach(element => {
                 if(element.constructor == Array)
-                res.send('Inserted Crud id : '+element[0].MatriculaID);
+                res.send('Inserido Crud id : '+element[0].MatriculaID);
             });
         else
             console.log(err);
@@ -77,7 +77,7 @@ app.put('/Cruds', (req, res) => {
     CALL ADDouEditar(@MatriculaID,@CPF,@Nome,@idade);";
     mysqlConnection.query(sql, [emp.MatriculaID, emp.CPF, emp.Nome, emp.idade], (err, rows, fields) => {
         if (!err)
-            res.send('Updated successfully');
+            res.send('Atualizado com sucesso');
         else
             console.log(err);
     })
